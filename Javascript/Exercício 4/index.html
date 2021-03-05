@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operação</title>
+    <script>
+        var n1 = parseInt(prompt('Digite um número: '))
+        var oper = prompt('Quer uma soma ou subtração? ').toLocaleLowerCase()
+        var n2 = parseInt(prompt('Digite mais um número: '))
+
+        function verifyOperation(a,b,operation){
+            if(operation == 'soma'){
+                return a + b
+            }else if(operation == 'subtração'){
+                return a - b
+            }else{
+                return 'Erro!'
+            }
+        }
+
+        var res = verifyOperation(n1, n2, oper)
+
+        document.write('O resultado é: ' + res + '.')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
