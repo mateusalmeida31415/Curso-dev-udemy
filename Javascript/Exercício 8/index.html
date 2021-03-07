@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionando Classe aos elementos</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .estilo1{
+            font-size: 40px;
+        }
+
+        .estilo2{
+            background-color: rgba(0, 0, 0, .5);
+            color: white;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 20px;
+        }
+        a{
+            padding: 10px;
+            margin-top: 10px;
+            background-color: black;
+            border-radius: 5px;
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="estilo1">Estilo 1 aplicado!</div>
+    <a id="btn">Aplicar outro</a>
+
+    <script>
+        let btn = document.querySelector('#btn')
+        let text = document.querySelector('.estilo1')
+
+        btn.addEventListener('click', () => {
+            text.className = 'estilo2'
+            text.innerText = 'Estilo 2 aplicado!'
+        })
+    </script>
+</body>
+</html>
