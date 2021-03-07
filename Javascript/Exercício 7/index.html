@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando estilo por meio do DOM</title>
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-self: center;
+        }
+        a{
+            padding: 20px;
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            border-radius: 10px;
+            transition: all .25s linear;
+        }
+        a:nth-child(1){
+            background-color: red;
+        }
+
+        a:nth-child(2){
+            background-color: blue;
+        }
+
+        a:nth-child(3){
+            background-color: green;
+        }
+
+
+        a:hover{
+            opacity: 0.5;
+        }
+
+        #box{
+            margin-top: 10px;
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            box-shadow: 1px 1px 3px black;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 700;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a id="red" href="#">Vermelho</a>
+        <a id="blue" href="#">Azul</a>
+        <a id="green" href="#">Verde</a>
+    </div>
+
+    <div id="box">
+        Cor Atual: Dark
+    </div>
+
+    <script>
+
+        //Meus botões 
+        let btnRed = document.querySelector('#red')
+        let btnBlue = document.querySelector('#blue')
+        let btnGreen = document.querySelector('#green')
+
+        //Elemento que irá mudar a sua cor depois de clicarmos nos botões
+        let changeBox = document.querySelector('#box')
+
+        //Quando o usuário clicar sobre o botão a função abaixo será executada
+        btnRed.addEventListener('click', () => {
+            //Deixa a div de ID box visível
+            changeBox.style.display = "flex"
+            //Modifica a cor para vermelho da div de ID box
+            changeBox.style.backgroundColor = 'red'
+            //Modifica o texto da div de ID box
+            changeBox.innerText = 'Cor Atual: Vermelha'
+        })
+
+         //Quando o usuário clicar sobre o botão a função abaixo será executada
+        btnBlue.addEventListener('click', () => {
+            //Deixa a div de ID box visível
+            changeBox.style.display = "flex"
+            //Modifica a cor para azul da div de ID box
+            changeBox.style.backgroundColor = 'blue'
+            //Modifica o texto da div de ID box
+            changeBox.innerText = 'Cor Atual: Azul'
+        })
+        
+         //Quando o usuário clicar sobre o botão a função abaixo será executada
+        btnGreen.addEventListener('click', () => {
+            //Deixa a div de ID box visível
+            changeBox.style.display = "flex"
+            //Modifica a cor para verde da div de ID box
+            changeBox.style.backgroundColor = 'green'
+            //Modifica o texto da div de ID box
+            changeBox.innerText = 'Cor Atual: Verde'
+        })
+
+    </script>
+</body>
+</html>
