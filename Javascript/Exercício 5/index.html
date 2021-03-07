@@ -31,6 +31,17 @@
     <div class="box-2">
         Texto... 
     </div>
+
+    <h1>Evento de formulário</h1>
+    <div>
+        <input type="text" name="nome" id="nome" placeholder="Digite o seu nome">
+    </div>
+
+    <label>Seu sexo:</label>
+    <input  class="radio" type="radio" value="masculino" name="sexo" id="masculino">
+    <label for="masculino">Masculino</label>
+    <input  class="radio" type="radio" value="feminino" name="sexo" id="feminino">
+    <label for="feminino">Feminino</label>
     
     <script>
         //Box 1 
@@ -38,6 +49,11 @@
         
         //Box 2
         let myBox2 = document.querySelector('.box-2')
+
+        //Input Text
+        let myInput = document.querySelector('#nome')
+
+        let myInput2 = document.querySelector('.radio')
 
         //Evento de Clique
         myBox.addEventListener('click', () => {
@@ -69,25 +85,42 @@
         //########################################
 
         //Apertando uma tecla
-        document.body.addEventListener('keydown', () => {
+        window.addEventListener('keydown', () => {
             myBox2.style.backgroundColor = 'pink'
         })
         
         //Soltar tecla 
-        document.body.addEventListener('keyup', () => {
+        window.addEventListener('keyup', () => {
             myBox2.style.backgroundColor = 'red'
         })
 
         //########################################
 
         //Quando a tela é redimensionada
-        document.body.addEventListener('resize', () => {
-            body.style.backgroundColor = 'blue'
+        window.addEventListener('resize', () => {
+            document.body.style.backgroundColor = 'grey'
         })
 
         //Quando a página é rolada
-        document.body.addEventListener('scroll', () => {
-            body.style.backgroundColor = 'red'
+        window.addEventListener('scroll', () => {
+            document.body.style.backgroundColor = 'lightblue'
+        })
+
+        //########################################
+
+        //Quando clico no elemento
+        myInput.addEventListener('focus', () => {
+            myInput.style.backgroundColor = 'pink'
+        })
+
+        //Quando saio do elemento
+        myInput.addEventListener('blur', () => {
+            myInput.style.backgroundColor = 'red'
+        })
+
+        //Quando saio do elemento
+        myInput2.addEventListener('change', () => {
+            console.log('I change!')
         })
     </script>
 </body>
