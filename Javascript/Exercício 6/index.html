@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container{
+            margin-top: 100px;
+            width: 70%;
+        }
+
+        #texto{
+            width: 100%;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" name="texto" id="texto" placeholder="Digite alguns caracteres nesse campo ...">
+    </div>
+
+    <div class="container box">
+        <label for="">letras: </label>
+        <input type="text" name="letras" id="letras" disabled>
+        <label for="">Numeros: </label>
+        <input type="text" name="numeros" id="numeros" disabled>
+    </div>
+    
+    <script>
+        let inputField = document.querySelector('#texto')
+        let inputTexto = document.querySelector('#letras')
+        let inputNumeros = document.querySelector('#numeros')
+
+        inputField.addEventListener('keyup', () =>{
+            let carater = inputField.value 
+
+            if(
+                carater == '0' ||
+                carater == '1' ||
+                carater == '2' ||
+                carater == '3' ||
+                carater == '4' ||
+                carater == '5' ||
+                carater == '6' ||
+                carater == '7' ||
+                carater == '8' ||
+                carater == '9'
+            ){
+                inputNumeros.value += carater
+            }else{
+                inputTexto.value += carater
+            }
+
+            inputField.value = ""
+        })
+    </script>
+</body>
+</html>
