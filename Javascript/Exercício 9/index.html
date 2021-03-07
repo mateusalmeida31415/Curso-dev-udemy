@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercícios usando eventos </title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .container{
+            width: 300px;
+            height: 300px;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #msg{
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="container">
+        <h3 id="msg"></h3>
+        <input type="text" name="texto" id="texto" placeholder="Digite algum texto...">
+    </div>
+
+    <script>
+        let box = document.querySelector('#texto')
+        let msg = document.querySelector('#msg')
+
+        //Quando entramos no campo o evento abaixo é ativado
+        box.addEventListener('focus', () => {
+            //Muda a cor de fundo do elemento input
+            box.style.backgroundColor = 'yellow'
+        })
+
+        //Quando saimos no campo o evento abaixo é ativado
+        box.addEventListener('blur', () => {
+            
+            //Resgata o texto contido no input text, remove os espaços em branco no inicio é fim
+            //E também retorna a quantidade de caracter dentro da string 
+            let numOfChar = box.value.trim().length
+
+            if(numOfChar <= 3){
+                box.style.backgroundColor = 'red'
+                msg.innerText = 'Erro, quantidade de caracteres inferior ao valor mínimo!!'
+
+            }else{
+                box.style.backgroundColor = 'green'
+                msg.innerText = 'Finalizado com sucesso!!'
+            }
+        })
+        
+    </script>
+</body>
+</html>
