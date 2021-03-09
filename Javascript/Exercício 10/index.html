@@ -54,29 +54,48 @@
     </div>
 
     <script>
+
+        //Botão adicionar 
         let btnAdc = document.querySelector('#btn-adc')
+        //Botão Ordenar
         let btnOrd = document.querySelector('#btn-ord')
+        //Input do tipo texto 
         let field = document.querySelector('#texto')
+        //Lista de objetos que serão inseridos no campo input
         let lista = []
 
+        //Quando o usuário clicar no botão adicionar a função abaixo será executada
         btnAdc.addEventListener('click', () => {
-            let textField = field.value.trim()
-
+            //Valor do campó input será adicionado a várial
+            let textField = field.value.trim().toLowerCase()
+            //Limpa o campo input
             field.value = ''
-
+            //Se o usuário digitar uma string vazia uma mensagem será exibida
             if(textField == ""){
                 alert('Informe um valor válido!')
+            //Se o usuário digitar um elemento que já existe no array uma mensagem será exibida
+            }else if(lista.indexOf(textField) != -1){
+                alert('O valor já foi informado!')
+            //O valor digita no campo está correto é será adicionado ao array
             }else{
-                alert('Objeto já foi adicionado')
-                list.push(textField)
+                alert('Objeto já foi adicionado!!')
+                lista.push(textField)
             }
+            
 
             
+
+            console.log("Verificando lista: " + lista)
         })
 
+        //Quando o usuário clicar no botão ordenar a função abaixo será executada
         btnOrd.addEventListener('click', () => {
+            //Ordena o array em ordem alfabetica 
+            lista.sort()
 
+            console.log("A lista foi ordenada com sucesso!! " + lista)
         })
+
     </script>
 </body>
 </html>
