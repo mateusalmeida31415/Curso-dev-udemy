@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de elementos</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-box{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a{
+            text-decoration: none;
+            padding: 10px;
+            background-color: grey;
+            margin: 10px;
+            border-radius: 5px;
+            color: white;
+            transition: background-color .25s linear;
+        }
+        a:hover{
+            background-color: rgba(0, 0, 0, .7);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" name="texto" id="texto" placeholder="Digite o nome de uma objeto: ">
+        <div class="btn-box">
+            <a id="btn-adc" href="#">Adicionar</a> 
+            <a id="btn-ord" href="#">Ordenar</a>
+        </div>
+    </div>
+
+    <script>
+        let btnAdc = document.querySelector('#btn-adc')
+        let btnOrd = document.querySelector('#btn-ord')
+        let field = document.querySelector('#texto')
+        let lista = []
+
+        btnAdc.addEventListener('click', () => {
+            let textField = field.value.trim()
+
+            field.value = ''
+
+            if(textField == ""){
+                alert('Informe um valor válido!')
+            }else{
+                alert('Objeto já foi adicionado')
+                list.push(textField)
+            }
+
+            
+        })
+
+        btnOrd.addEventListener('click', () => {
+
+        })
+    </script>
+</body>
+</html>
