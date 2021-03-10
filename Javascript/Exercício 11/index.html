@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>  
+    <script>
+        var frutas = ['banana', 'maçã', 'morango', 'uva']
+
+        for(var i = 0; i <= (frutas.length - 1); i++){
+            console.log(frutas[i])
+        }
+
+        console.log('##################')
+
+        var n1 = 0
+        while(n1 <= 10){
+            var n2 = 0
+
+            console.log('##########################')
+            console.log('Taboada de: ' + n1)
+            while(n2 <= 10){
+                var mul = n1*n2
+                console.log(n1 + ' x ' + n2 + ' = ' + mul + '.' )
+
+                n2++
+            }
+
+            n1++
+        }
+    </script>
+    
+</body>
+</html>
