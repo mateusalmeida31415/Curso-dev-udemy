@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    cursor: url('../img/mata_mosca.png'),auto;
+    height: 100vh;
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    #level{
+        cursor: pointer;
+    }
+
+    .btn{
+        cursor: pointer;
+    }
+    
+}
