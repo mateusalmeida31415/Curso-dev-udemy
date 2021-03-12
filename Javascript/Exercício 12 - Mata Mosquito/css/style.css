@@ -3,7 +3,7 @@
           box-sizing: border-box;
 }
 
-body {
+#principal {
   cursor: url("../img/mata_mosca.png"), auto;
   height: 100vh;
   background-image: url("../img/bg.jpg");
@@ -11,11 +11,29 @@ body {
   background-size: cover;
 }
 
-body #level {
+#principal #level {
   cursor: pointer;
 }
 
-body .btn {
+#principal .btn {
   cursor: pointer;
+}
+
+#game {
+  cursor: url("../img/mata_mosca.png"), auto;
+  height: 100vh;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#game #level {
+  cursor: pointer;
+}
+
+#game img {
+  position: absolute;
+  height: 500px;
+  width: 500px;
 }
 /*# sourceMappingURL=style.css.map */

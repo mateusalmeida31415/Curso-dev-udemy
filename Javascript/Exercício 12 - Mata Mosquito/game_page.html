@@ -13,22 +13,31 @@
 
     <title>Mata Mosquito</title>
   </head>
-  <body>
+  <body id="game">
 
-    <div class="container d-flex justify-content-center flex-column align-items-center">
-        <div class="box-mosquito">
-            <img src="img/game.png" alt="">
-        </div>
-        <div>
-            <select class="form-control" name="level" id="level">
-                <option value="" selected disabled> - - Selecione o nível - </option>
-                <option value="facil">Fácil</option>
-                <option value="intermediario">Intermediario</option>
-                <option value="hard">Hard</option>
-            </select>
-        </div>
-        <a class="btn btn-danger mt-2" href="#">Iníciar Jogo</a>
-    </div>
+    <img class="mosquito" src="img/mosca.png" alt="">
+
+    <script>
+    
+        let altura = window.innerHeight
+        let largura = window.innerWidth
+
+       //Ajustando palco do jogo
+        window.addEventListener('resize', () => {
+          altura = window.innerHeight
+          largura = window.innerWidth
+          
+        })
+
+        //Gerando posição 
+        function gerandoPosicao(){
+          let xValue = Math.ceil(Math.random()*largura)
+          let yValue = Math.ceil(Math.random()*altura)
+          console.log(xValue + '   ' + yValue)
+        }
+        
+        gerandoPosicao()
+    </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
