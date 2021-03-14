@@ -36,4 +36,28 @@
   height: 500px;
   width: 500px;
 }
+
+#game .painel {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+}
+
+#game .painel .vidas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 28px;
+  margin-bottom: 5px;
+}
+
+#game .painel .vidas img {
+  width: 30px;
+  height: 28px;
+  position: static;
+}
 /*# sourceMappingURL=style.css.map */
