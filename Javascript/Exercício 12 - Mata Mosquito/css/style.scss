@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 #principal{
-    cursor: url('../img/mata_mosca.png'),auto;
+    cursor: url('../img/mata_mosca.png'), auto;
     height: 100vh;
     background-image: url('../img/bg.jpg');
     background-repeat: no-repeat;
@@ -39,6 +39,7 @@
         bottom: 0;
         left: 0;
         padding: 10px;
+        
         .vidas{
             display: flex;
             justify-content: space-around;

@@ -9,27 +9,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <!-- CSS Externo -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Mata Mosquito</title>
   </head>
-  <body id="game">
+  <body id="principal">
 
-    <div class="painel">
-
-      <div class="vidas">
-        <img id="vida1" src="./img/coracao_cheio.png">
-        <img id="vida2" src="./img/coracao_cheio.png">
-        <img id="vida3" src="./img/coracao_cheio.png">
-      </div>
-
-      <div class="cronometro">
-        Tempo restante: <span id="cronometro">60s</span>
-      </div>
+    <div class="container d-flex justify-content-center flex-column align-items-center">
+        <div class="box-mosquito">
+            <img src="img/game_over.png" alt="">
+        </div>
+        <div >
+          <a class="btn btn-dark btn-lg mt-2" href="game_page.html">Reiniciar</a>
+          <a class="btn btn-dark btn-lg mt-2" href="index.html">Mudar dificuldade</a>
+        </div>
+        
     </div>
-
-    <!-- Script externo -->
-    <script src="./js/game.js"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
